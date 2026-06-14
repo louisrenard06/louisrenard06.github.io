@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio — SAÉ - Gestion et analyse des notes avec Excel et VBA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="header-title">Projet</div>
+
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+
+      <a class="back-btn fade-in" href="../projets.html">Retour aux projets</a>
+
+      <div class="project-hero fade-in fade-in-1">
+
+        <div class="project-img project-img-placeholder">🗄️</div>
+
+        <div class="project-hero-info">
+
+          <div class="project-breadcrumb">
+            <a href="projets.html">Projets</a>
+            <span>/</span>
+            <span>Universitaire</span>
+            <span>/</span>
+            <span>SAÉ - Gestion et analyse des notes avec Excel et VBA</span>
+          </div>
+
+          <h1 class="project-title">
+            <span class="project-title-emoji">🗄️</span>
+            SAÉ - Gestion et analyse des notes avec Excel et VBA
+          </h1>
+
+          <p class="project-tagline">
+            Outil dynamique de gestion et d'analyse des notes développé avec Excel et VBA.
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">Universitaire</span>
+            <span class="badge">S1 - 2025/2026</span>
+            <span class="badge done">Terminé</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           PRÉSENTATION
+           ================================================ -->
+      <div class="project-section fade-in fade-in-2">
+        <div class="section-title">Présentation</div>
+
+        <div class="project-description">
+
+          <p>
+            La maquette de notre formation est complexe : chaque évaluation possède ses propres coefficients et appartient à un cours, qui possède lui-même ses propres coefficients et appartient à une matière, laquelle est rattachée à un bloc de compétences. De plus, un même projet peut être pris en compte dans plusieurs matières.
+          </p>
+
+          <p>
+            Afin de pouvoir calculer nos moyennes, nous avons dû réaliser ce projet avec Excel et VBA, des technologies que nous venions tout juste d'apprendre. Ce projet devait initialement être réalisé seul. Cependant, ayant déjà de l'expérience en programmation, j'ai choisi de travailler de manière autonome.
+          </p>
+
+          <p>
+            L'objectif était de pouvoir ajouter et supprimer une note en sélectionnant ses différentes affiliations à l'aide d'un UserForm VBA. Les données devaient être stockées dans le même fichier Excel puis exploitées dynamiquement grâce à Excel et VBA afin de calculer les moyennes ainsi que d'autres indicateurs de notre choix.
+          </p>
+
+          <p>
+            Pour cela, nous disposions de la maquette complète de la formation (voir illustration).
+          </p>
+
+          <p>
+            Pour ma part, j'ai choisi de conserver la structure de la maquette de formation comme base de travail, en la modifiant le moins possible manuellement.
+          </p>
+
+          <p>
+            J'ai créé plusieurs UserForms comportant des cases à cocher et des listes déroulantes alimentées dynamiquement par VBA afin de limiter les risques d'erreur humaine. Tous les champs de saisie (comme la note ou le coefficient interne) intégraient des contrôles de validation.
+          </p>
+
+          <p>
+            J'ai également ajouté plusieurs fonctionnalités qui n'étaient pas forcément demandées, telles que la gestion de l'enseignant associé à une note, la gestion du coefficient interne ou encore la possibilité de modifier une note existante.
+          </p>
+
+          <p>
+            Une fois saisies, les données étaient enregistrées dans une feuille masquée. Cette feuille était structurée sous forme de colonnes et chaque note correspondait à une ligne, à la manière d'un fichier CSV ou d'une base de données tabulaire.
+          </p>
+
+          <p>
+            Le projet comportait également une page d'accueil permettant d'accéder aux différents UserForms ainsi qu'un tableau de bord regroupant les calculs de moyennes et plusieurs graphiques dynamiques.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           TECHNOLOGIES
+           ================================================ -->
+      <div class="project-section fade-in fade-in-3">
+        <div class="section-title">Technologies</div>
+
+        <div class="tech-grid">
+
+          <div class="tech-item">
+            <div class="tech-name">Excel</div>
+            <div class="tech-desc">
+              Calculs à l'aide de formules imbriquées et structuration des données.
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">VBA</div>
+            <div class="tech-desc">
+              Développement des UserForms, automatisation des calculs, remplissage dynamique des interfaces et création de graphiques.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           DÉTAILS
+           ================================================ -->
+      <div class="project-section fade-in fade-in-4">
+        <div class="section-title">Détails</div>
+
+        <div class="detail-blocks">
+
+          <div class="detail-block">
+            <div class="detail-block-title">Fonctionnalités principales</div>
+
+            <ul>
+              <li>Ajout, modification et suppression de notes via des UserForms.</li>
+              <li>Calcul dynamique des moyennes et d'autres indicateurs.</li>
+              <li>Navigation dynamique à l'aide de boutons.</li>
+              <li>Analyse automatique du passage en deuxième année.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block-title">Architecture</div>
+
+            <p>
+              L'application repose sur une architecture organisée autour de plusieurs feuilles Excel et modules VBA. Les UserForms permettent la saisie des données, qui sont ensuite stockées dans une feuille masquée servant de base de données.
+            </p>
+
+            <p>
+              Les différents modules VBA assurent la validation des saisies, le calcul des indicateurs et la mise à jour automatique des tableaux de bord et graphiques.
+            </p>
+
+            <p>
+              Cette organisation permet de séparer la saisie, le stockage et l'exploitation des données tout en conservant un unique fichier Excel.
+            </p>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block-title">Difficultés rencontrées</div>
+
+            <p>
+              La charge de travail était importante puisque j'ai réalisé seul un projet qui devait normalement être effectué en binôme.
+            </p>
+
+            <p>
+              De plus, nous venions tout juste de découvrir VBA, ce qui a nécessité un temps d'apprentissage conséquent avant de pouvoir exploiter pleinement le langage.
+            </p>
+
+            <p>
+              J'ai également manqué de temps pour travailler davantage l'aspect esthétique de l'application, mais je me suis assuré que toutes les fonctionnalités que je jugeais essentielles soient présentes et opérationnelles.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           ILLUSTRATIONS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Illustrations</div>
+
+        <div class="illus-grid">
+
+        <div class="illus-item">
+          <img src="./img/VBA-illu1.png" alt="Ilustration maquette formation S1">
+        </div>
+        
+
+          <div>
+            <div class="illus-item illus-placeholder">
+              <span class="illus-icon">🖼️</span>
+              <span>Screenshot 2</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="illus-item illus-placeholder">
+              <span class="illus-icon">🖼️</span>
+              <span>Screenshot 3</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           LIENS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Liens</div>
+
+        <div class="project-links">
+
+          <a href="#" class="project-link link-primary">
+            ⇗ GitHub
+          </a>
+
+          <a href="#" class="project-link link-outline">
+            📄 Rapport PDF
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>Louis RENARD &mdash; Portfolio 2026</span> &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+
+  <script src="../../js/nav.js"></script>
+
+</body>
+</html>

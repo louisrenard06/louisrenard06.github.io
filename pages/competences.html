@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Compétences</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- ===== Styles spécifiques au nuage de mots de compétences ===== -->
+  <style>
+    /* Conteneur d'un nuage */
+    .cloud-block {
+      margin-bottom: 56px;
+    }
+    .cloud-block h3 {
+      font-family: var(--font-display);
+      font-size: 11px;
+      color: var(--blue-3);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cloud-block h3::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .word-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-2);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .word-cloud::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--blue-dim), var(--blue), var(--blue-bright));
+      opacity: .6;
+    }
+
+    /* Mot individuel */
+    .cloud-word {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      transition: transform .2s ease, text-shadow .2s ease, opacity .2s ease;
+      cursor: default;
+      opacity: 0;
+      animation: wordPop .6s cubic-bezier(.34,1.56,.64,1) forwards;
+    }
+    .cloud-word:hover {
+      transform: translateY(-3px) scale(1.06);
+    }
+
+    /* ---- Animation d'apparition en cascade (légèrement décalée) ---- */
+    @keyframes wordPop {
+      0%   { opacity: 0; transform: translateY(14px) scale(.7) rotate(-3deg); }
+      60%  { opacity: 1; transform: translateY(-2px) scale(1.04) rotate(1deg); }
+      100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+    }
+    .word-cloud .cloud-word:nth-child(1)  { animation-delay: .55s; }
+    .word-cloud .cloud-word:nth-child(2)  { animation-delay: .15s; }
+    .word-cloud .cloud-word:nth-child(3)  { animation-delay: .70s; }
+    .word-cloud .cloud-word:nth-child(4)  { animation-delay: .30s; }
+    .word-cloud .cloud-word:nth-child(5)  { animation-delay: .85s; }
+    .word-cloud .cloud-word:nth-child(6)  { animation-delay: .05s; }
+    .word-cloud .cloud-word:nth-child(7)  { animation-delay: .45s; }
+    .word-cloud .cloud-word:nth-child(8)  { animation-delay: .65s; }
+    .word-cloud .cloud-word:nth-child(9)  { animation-delay: .25s; }
+    .word-cloud .cloud-word:nth-child(10) { animation-delay: .75s; }
+
+    /* ---- Taille = importance ---- */
+    .size-xl { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+    .size-lg { font-size: clamp(1.4rem, 3.6vw, 1.9rem); }
+    .size-md { font-size: clamp(1.05rem, 2.6vw, 1.35rem); }
+    .size-sm { font-size: clamp(0.78rem, 2vw, 0.95rem); }
+
+    /* ---- Couleur = maîtrise (du bleu froid au rouge chaud) ---- */
+    .m-faible {
+      color: #3b82f6;
+      text-shadow: 0 0 14px rgba(59,130,246,0.45);
+    }
+    .m-moyen {
+      color: #facc15;
+      text-shadow: 0 0 14px rgba(250,204,21,0.4);
+    }
+    .m-fort {
+      color: #fb923c;
+      text-shadow: 0 0 16px rgba(251,146,60,0.45);
+    }
+    .m-tresfort {
+      color: #ef4444;
+      text-shadow: 0 0 18px rgba(239,68,68,0.5);
+    }
+
+    /* Légendes */
+    .cloud-legends {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px 32px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .legend-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--bg-card-2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px 18px;
+      min-width: 200px;
+    }
+    .legend-group span.legend-title {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--grey-2);
+      font-family: var(--font-mono);
+      margin-bottom: 2px;
+    }
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--grey-2);
+      font-family: var(--font-mono);
+    }
+    .legend-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .legend-size {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    /* Légende combinée au-dessus des nuages */
+    .cloud-legend-wrapper {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-title">Compétences</div>
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+
+      <div class="section-header fade-in">
+        <span class="section-label">Stack technique</span>
+        <h1>Mes Compétences</h1>
+        <p>
+          Représentation sous forme de nuages de mots : la <strong style="color:var(--white)">couleur</strong>
+          indique mon niveau de maîtrise (du bleu — débutant — au rouge — confirmé).
+        </p>
+      </div>
+
+      <!-- Légende globale -->
+      <div class="cloud-legend-wrapper fade-in">
+        <div class="cloud-legends">
+          
+          <div class="legend-group">
+            <span class="legend-title">Couleur — maîtrise</span>
+            <div class="legend-row"><span class="legend-dot" style="background:#3b82f6; box-shadow:0 0 8px rgba(59,130,246,.6);"></span> En apprentissage </div>
+            <div class="legend-row"><span class="legend-dot" style="background:#facc15; box-shadow:0 0 8px rgba(250,204,21,.6);"></span> Appris</div>
+            <div class="legend-row"><span class="legend-dot" style="background:#fb923c; box-shadow:0 0 8px rgba(251,146,60,.6);"></span> Maîtrisé </div>
+            <div class="legend-row"><span class="legend-dot" style="background:#ef4444; box-shadow:0 0 8px rgba(239,68,68,.6);"></span> Maîtrise avancée </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nuage 1 : Langages de programmation -->
+      <div class="cloud-block fade-in">
+        <h3>💻 Langages de programmation</h3>
+        <div class="word-cloud">
+          <span class="cloud-word size-xl m-tresfort">Python</span>
+          <span class="cloud-word size-lg m-fort">R</span>
+          <span class="cloud-word size-xl m-tresfort">SQL</span>
+          <span class="cloud-word size-lg m-moyen">SAS</span>
+          <span class="cloud-word size-md m-moyen">VBA</span>
+          <span class="cloud-word size-sm m-fort">Pandas</span>
+          <span class="cloud-word size-sm m-faible">Prog Web</span>
+        </div>
+      </div>
+
+      <!-- Nuage 2 : Outils -->
+      <div class="cloud-block fade-in fade-in-1">
+        <h3>🛠️ Outils</h3>
+        <div class="word-cloud">
+          <span class="cloud-word size-sm m-faible">Sphinx</span>
+          <span class="cloud-word size-lg m-fort">Excel</span>
+          <span class="cloud-word size-lg m-fort">Power BI</span>
+          <span class="cloud-word size-lg m-fort">Suite Office</span>
+          <span class="cloud-word size-sm m-moyen">Git</span>
+          <span class="cloud-word size-sm m-moyen">GitHub</span>
+          <span class="cloud-word size-md m-fort">Canva</span>
+        </div>
+      </div>
+
+      <!-- Nuage 3 : Soft skills -->
+      <div class="cloud-block fade-in fade-in-2">
+        <h3>🧠 Savoir-être</h3>
+        <div class="word-cloud">
+          <span class="cloud-word size-lg m-fort">Gestion de projet</span>
+          <span class="cloud-word size-lg m-fort">Travail d'équipe</span>
+          <span class="cloud-word size-lg m-fort">Communication</span>
+          <span class="cloud-word size-lg m-faible">Anglais technique</span>
+          <span class="cloud-word size-md m-fort">Autonomie</span>
+          <span class="cloud-word size-md m-fort">Proactivité</span>
+          <span class="cloud-word size-sm m-fort">Esprit d'initiative</span>
+          <span class="cloud-word size-sm m-fort">Esprit de synthèse</span>
+	  <span class="cloud-word size-sm m-fort">Développement</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Louis RENARD &mdash; Portfolio 2025 &nbsp;·&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;·&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  TEMPLATE PAGE DÉTAIL PROJET                            ║
+  ║  Dupliquez ce fichier pour chaque projet.               ║
+  ║  Remplacez les zones marquées <!-- MODIFIER -->         ║
+  ╚══════════════════════════════════════════════════════════╝
+  -->
+
+  <!-- MODIFIER : nom du projet -->
+  <title>Portfolio — Nom du Projet</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/style.css">
+    
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <!-- MODIFIER : titre dans le header -->
+    <div class="header-title">Projet</div>
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+
+      <!-- Retour -->
+      <a class="back-btn fade-in" href="projets.html">Retour aux projets</a>
+
+      <!-- ================================================
+           HERO : EN-TÊTE DU PROJET
+           ================================================ -->
+      <div class="project-hero fade-in fade-in-1">
+
+        <!--
+          IMAGE / ILLUSTRATION DU PROJET (optionnelle)
+          ─────────────────────────────────────────────
+          Option A — vraie image :
+            <img class="project-img" src="../img/nom-projet.png" alt="Aperçu du projet">
+
+          Option B — placeholder emoji (si pas d'image) :
+            <div class="project-img project-img-placeholder">🗄️</div>
+
+          Option C — supprimer ce bloc si vous ne voulez aucune image
+        -->
+        <!-- MODIFIER : choisir l'option et adapter -->
+        <div class="project-img project-img-placeholder">🗄️</div>
+
+        <div class="project-hero-info">
+
+          <!-- Fil d'Ariane -->
+          <div class="project-breadcrumb">
+            <a href="projets.html">Projets</a>
+            <span>/</span>
+            <!-- MODIFIER : catégorie -->
+            <span>Universitaire</span>
+            <span>/</span>
+            <!-- MODIFIER : nom court -->
+            <span>SGBD Java</span>
+          </div>
+
+          <!-- MODIFIER : titre du projet -->
+          <h1 class="project-title">
+            <span class="project-title-emoji">🗄️</span>
+            Système de Gestion<br>de Base de Données
+          </h1>
+
+          <!-- MODIFIER : phrase d'accroche courte (1-2 lignes) -->
+          <p class="project-tagline">
+            SGBD simplifié en Java — transactions, indexation B-tree et interface SQL intégrée.
+          </p>
+
+          <!-- MODIFIER : badges de statut/type/année -->
+          <div class="project-badges">
+            <span class="badge">Universitaire</span>
+            <span class="badge">2024</span>
+            <span class="badge done">Terminé</span>
+            <!-- Options de statut : class="badge done" | class="badge in-progress" | class="badge" -->
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ================================================
+           SECTION 1 : PRÉSENTATION
+           ================================================ -->
+      <div class="project-section fade-in fade-in-2">
+        <div class="section-title">Présentation</div>
+
+        <!-- MODIFIER : description complète du projet -->
+        <div class="project-description">
+          <p>
+            Dans le cadre de ce projet universitaire, l'objectif était de concevoir et implémenter
+            un Système de Gestion de Base de Données (SGBD) simplifié en Java, sans recourir à une
+            bibliothèque externe. Ce projet m'a permis de comprendre en profondeur le fonctionnement
+            interne d'un moteur de base de données.
+          </p>
+          <p>
+            Le système supporte un sous-ensemble du langage SQL : les requêtes SELECT, INSERT, UPDATE
+            et DELETE, ainsi que la création et suppression de tables. La gestion des transactions
+            garantit l'atomicité et la cohérence des opérations, avec support du rollback.
+          </p>
+          <p>
+            <!-- Ajoutez autant de paragraphes que nécessaire -->
+            Remplacez ce paragraphe par d'autres détails sur le contexte, les objectifs ou les résultats.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ================================================
+           SECTION 2 : TECHNOLOGIES
+           ================================================ -->
+      <div class="project-section fade-in fade-in-3">
+        <div class="section-title">Technologies</div>
+
+        <!-- MODIFIER : ajoutez / retirez des tech-item selon votre projet -->
+        <div class="tech-grid">
+
+          <div class="tech-item">
+            <div class="tech-name">Java</div>
+            <div class="tech-desc">Langage principal — POO, gestion mémoire, I/O fichiers</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">SQL</div>
+            <div class="tech-desc">Sous-ensemble SQL implémenté : DDL + DML</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">B-Tree</div>
+            <div class="tech-desc">Structure d'indexation pour optimiser les requêtes</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">JUnit</div>
+            <div class="tech-desc">Tests unitaires — couverture des cas critiques</div>
+          </div>
+
+          <!-- Dupliquez ce bloc pour ajouter une technologie :
+          <div class="tech-item">
+            <div class="tech-name">NOM TECHNO</div>
+            <div class="tech-desc">Description courte de son rôle dans le projet</div>
+          </div>
+          -->
+
+        </div>
+      </div>
+
+
+      <!-- ================================================
+           SECTION 3 : DÉTAILS
+           ================================================ -->
+      <div class="project-section fade-in fade-in-4">
+        <div class="section-title">Détails</div>
+
+        <div class="detail-blocks">
+
+          <!-- Dupliquez ces blocs selon vos besoins -->
+
+          <div class="detail-block">
+            <div class="detail-block-title">Fonctionnalités principales</div>
+            <!-- MODIFIER : liste ou paragraphe -->
+            <ul>
+              <li>Parsing et exécution de requêtes SQL (SELECT, INSERT, UPDATE, DELETE)</li>
+              <li>Gestion des transactions avec support rollback et commit</li>
+              <li>Indexation B-tree pour optimisation des recherches</li>
+              <li>Persistance des données sur disque en format binaire</li>
+              <li>Interface ligne de commande interactive</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block-title">Architecture</div>
+            <!-- MODIFIER : description de l'architecture -->
+            <p>
+              L'architecture suit un pattern MVC adapté aux bases de données : le Parser extrait
+              l'AST de la requête SQL, le Planner génère le plan d'exécution, et l'Executor
+              interagit avec le StorageManager pour les opérations disque.
+            </p>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block-title">Difficultés rencontrées</div>
+            <!-- MODIFIER : difficultés ou points d'apprentissage -->
+            <p>
+              La gestion de la concurrence et l'implémentation correcte du protocole de verrouillage
+              en deux phases (2PL) ont été les aspects les plus complexes. La sérialisation des données
+              binaires a également nécessité une attention particulière pour la portabilité.
+            </p>
+          </div>
+
+          <!--
+            Idées de blocs supplémentaires :
+            - Résultats obtenus / performances mesurées
+            - Ce que j'ai appris
+            - Améliorations envisagées
+            - Contexte du projet (binôme, durée, etc.)
+          -->
+
+        </div>
+      </div>
+
+
+      <!-- ================================================
+           SECTION 4 : ILLUSTRATIONS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Illustrations</div>
+
+        <div class="illus-grid">
+
+          <!--
+            MODIFIER : remplacez les placeholders par de vraies images :
+            <div class="illus-item">
+              <img src="../img/projet-sgbd-1.png" alt="Interface ligne de commande">
+            </div>
+            <p class="illus-caption">Interface ligne de commande</p>
+          -->
+
+          <!-- Placeholder 1 — supprimer si image réelle -->
+          <div>
+            <div class="illus-item illus-placeholder">
+              <span class="illus-icon">🖼️</span>
+              <span>Screenshot 1</span>
+            </div>
+            <!-- <p class="illus-caption">Légende optionnelle</p> -->
+          </div>
+
+          <!-- Placeholder 2 -->
+          <div>
+            <div class="illus-item illus-placeholder">
+              <span class="illus-icon">🖼️</span>
+              <span>Screenshot 2</span>
+            </div>
+          </div>
+
+          <!-- Placeholder 3 -->
+          <div>
+            <div class="illus-item illus-placeholder">
+              <span class="illus-icon">🖼️</span>
+              <span>Screenshot 3</span>
+            </div>
+          </div>
+
+          <!-- Dupliquez ce bloc pour ajouter une illustration -->
+
+        </div>
+      </div>
+
+
+      <!-- ================================================
+           SECTION 5 : LIENS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Liens</div>
+
+        <!-- MODIFIER : ajustez les liens et labels, supprimez ceux non pertinents -->
+        <div class="project-links">
+
+          <a href="#" class="project-link link-primary">
+            ⇗ GitHub
+          </a>
+
+          <a href="#" class="project-link link-outline">
+            📄 Rapport PDF
+          </a>
+
+          <!--
+            Autres exemples :
+            <a href="#" class="project-link link-outline">🌐 Demo en ligne</a>
+            <a href="#" class="project-link link-outline">📊 Notebook</a>
+          -->
+
+        </div>
+      </div>
+
+
+    </div><!-- /page-wrapper -->
+  </main>
+
+  <footer>
+    <span>Louis RENARD &mdash; Portfolio 2025</span> &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+
+  <script src="../js/nav.js">
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Formation Universitaire</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ── Rétrospective : blocs structurés ── */
+    .retro-wrapper {
+      margin-top: 48px;
+    }
+    .retro-header {
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .retro-header::after {
+      content: '';
+      position: absolute; bottom: -1px; left: 0;
+      width: 60px; height: 1px;
+      background: var(--blue);
+      box-shadow: 0 0 10px rgba(0,170,255,0.6);
+    }
+    .retro-header .retro-eyebrow {
+      display: inline-block;
+      font-size: 9px; letter-spacing: 4px; color: var(--blue);
+      text-transform: uppercase; margin-bottom: 10px;
+      font-family: var(--font-mono);
+    }
+    .retro-header .retro-eyebrow::before { content: '// '; color: var(--grey-2); }
+    .retro-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--white);
+      letter-spacing: 2px; font-weight: 900;
+    }
+
+    .retro-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .retro-block {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0 28px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .retro-block:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .retro-block-meta {
+      padding-top: 2px;
+    }
+    .retro-block-label {
+      font-family: var(--font-display);
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--blue);
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+    .retro-block-label::before {
+      content: '//';
+      display: block;
+      color: var(--grey-2);
+      font-size: 11px;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+
+    .retro-block-body {
+      font-size: 13px;
+      color: var(--grey-2);
+      line-height: 1.9;
+    }
+    .retro-block-body p + p { margin-top: 12px; }
+
+    /* Variante mise en valeur : Remarque */
+    .retro-block--note .retro-block-body {
+      background: var(--blue-dark);
+      border: 1px solid rgba(0,170,255,0.15);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 4px 4px 0;
+      padding: 16px 20px;
+      color: var(--white);
+    }
+    /* Variante conclusion */
+    .retro-block--conclusion .retro-block-body {
+      color: var(--white);
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .retro-block { grid-template-columns: 1fr; gap: 8px 0; }
+      .retro-block-meta { padding-bottom: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-title">Formation Univ.</div>
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+  <main>
+    <div class="page-wrapper">
+      <div class="section-header fade-in">
+        <span class="section-label">Parcours académique</span>
+        <h1>Formation Universitaire</h1>
+        <p>Détail de mon parcours académique, année par année.</p>
+      </div>
+      <!-- Lien site de la formation -->
+      <a href="https://iutp.univ-poitiers.fr/sd/" target="_blank" class="univ-link-box fade-in">
+        <div class="link-icon">🏛️</div>
+        <div>
+          <h3>B.U.T. Science des Données (Bac+3) — Université de Poitiers, Campus de Niort</h3>
+          <p>Cliquez pour accéder au site officiel de la formation · iutp.univ-poitiers.fr</p>
+        </div>
+        <div class="ext-arrow">↗</div>
+      </a>
+      <!-- Timeline -->
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-date">2025 — 2026</div>
+          <h3>B.U.T. Science des Données — 1re année</h3>
+          <div class="institution">🏛️ I.U.T. de Poitiers — Campus de Niort</div>
+          <p>
+            Découverte des technologies fondamentales du monde de la donnée :
+            programmation décisionnelle, statistiques, visualisation et développement
+            des compétences professionnelles (soft skills).
+          </p>
+          <div class="module-grid">
+            <div class="module-item">
+              <strong>Programmation, statistique et algorithmique</strong>
+              Python, R, SQL, technologies web, VBA/Excel, développement
+            </div>
+            <div class="module-item">
+              <strong>Statistiques et probabilités</strong>
+              Outils fondamentaux, test d'indépendance (χ²), algèbre
+            </div>
+            <div class="module-item">
+              <strong>BI et gestion du cycle de la donnée</strong>
+              Conception d'infographies et de tableaux de bord
+            </div>
+            <div class="module-item">
+              <strong>Gestion de projet et soft skills</strong>
+              Méthodes agiles, communication, anglais technique, démographie et économie
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2022</div>
+          <h3>Baccalauréat — Mention Très Bien</h3>
+          <div class="institution">🏫 Lycée Gaston Bachelard — Niort</div>
+          <p>
+            Baccalauréat général avec spécialités Mathématiques et NSI
+            (Numérique &amp; Sciences Informatiques). Option mathématiques expertes.
+          </p>
+        </div>
+      </div>
+      <div class="note-box fade-in">
+        <strong>📌 Note :</strong> Pour les informations officielles et le programme complet,
+        consultez <a href="https://iutp.univ-poitiers.fr/sd/" target="_blank">le site de la formation →</a>
+      </div>
+
+      <!-- Rétrospective structurée -->
+      <div class="retro-wrapper fade-in fade-in-1">
+
+        <div class="retro-header">
+          <span class="retro-eyebrow">Bilan de fin d'année</span>
+          <h2>Rétrospective — 1ère Année</h2>
+        </div>
+
+        <div class="retro-blocks">
+
+          <!-- INTRODUCTION -->
+          <div class="retro-block">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Introduction</div>
+            </div>
+            <div class="retro-block-body">
+              <p>Cette 1ère année d'études supérieures a été pleine de découvertes, aussi bien sur le plan professionnel que sur le plan personnel.</p>
+            </div>
+          </div>
+
+          <!-- PLAN PROFESSIONNEL -->
+          <div class="retro-block">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Plan Professionnel</div>
+            </div>
+            <div class="retro-block-body">
+              <p>J'ai pu davantage découvrir le monde de la data : apprendre les fondamentaux des outils statistiques et de la programmation décisionnelle. J'ai également renforcé d'autres compétences comme l'anglais technique et la communication.</p>
+              <p>La philosophie professionnalisante du BUT me plaît énormément, et les nombreux projets réalisés m'ont permis de développer de nouvelles perspectives de réflexion. Bien que tout n'ait pas toujours été évident, je pense avoir progressé tout en maintenant un niveau d'exigence qui m'assure de vraiment comprendre et maîtriser ces nouvelles connaissances.</p>
+            </div>
+          </div>
+
+          <!-- PLAN PERSONNEL -->
+          <div class="retro-block">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Plan Personnel</div>
+            </div>
+            <div class="retro-block-body">
+              <p>Ce fut pour moi la découverte de l'autonomie. Originaire de banlieue parisienne, déménager dans une ville où je ne connaissais personne, à plusieurs centaines de kilomètres de ma famille, a été un pari audacieux.</p>
+              <p>Devoir gérer entièrement les tâches du quotidien peut paraître anodin, mais quand on doit le faire pour la première fois, cela oblige à se prendre en main. J'ai fait ce choix pour grandir en maturité. Après cette année scolaire, j'ai l'impression d'avoir appris énormément de choses du quotidien — faire à manger, gérer son budget, s'occuper de l'administratif… Je ne regrette absolument pas ce choix de vie, même si certains aspects ont été difficiles.</p>
+            </div>
+          </div>
+
+          <!-- REMARQUE -->
+          <div class="retro-block retro-block--note">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Remarque</div>
+            </div>
+            <div class="retro-block-body">
+              <p>J'aurais bien aimé avoir plus de temps pour mes projets personnels. Il m'a fallu du temps pour trouver un rythme entre obligations personnelles, vie scolaire — le niveau d'exigence que je m'impose oblige à passer beaucoup de temps à travailler — et temps pour soi, ce qui est pourtant essentiel à une vie saine et équilibrée.</p>
+            </div>
+          </div>
+
+          <!-- LEÇON POUR LA SUITE -->
+          <div class="retro-block">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Leçon pour la Suite</div>
+            </div>
+            <div class="retro-block-body">
+              <p>Je compte profiter de ces congés d'été pour concrétiser toutes les idées de projets que je n'ai pas eu le temps de réaliser (entre deux journées de travail). Trouver un meilleur équilibre entre ambition scolaire, projets personnels et récupération reste l'enjeu principal que je veillerai à mieux gérer dès la prochaine rentrée.</p>
+            </div>
+          </div>
+
+          <!-- CONCLUSION -->
+          <div class="retro-block retro-block--conclusion">
+            <div class="retro-block-meta">
+              <div class="retro-block-label">Conclusion</div>
+            </div>
+            <div class="retro-block-body">
+              <p>En définitive, cela a été une année riche en découvertes et véritablement plaisante. J'attends avec confiance et détermination l'année prochaine, qui s'annonce des plus stimulantes !</p>
+            </div>
+          </div>
+
+        </div><!-- /retro-blocks -->
+      </div><!-- /retro-wrapper -->
+
+    </div>
+  </main>
+  <footer>
+    Louis RENARD &mdash; Portfolio 2026 &nbsp;·&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;·&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+  <script src="../js/nav.js"></script>
+</body>
+</html>

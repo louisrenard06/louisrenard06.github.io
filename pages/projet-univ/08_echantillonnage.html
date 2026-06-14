@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — SAÉ — Estimation par échantillonnage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-title">Projet</div>
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+
+      <a class="back-btn fade-in" href="../projets.html">Retour aux projets</a>
+
+      <div class="project-hero fade-in fade-in-1">
+
+        <div class="project-img project-img-placeholder">📊</div>
+
+        <div class="project-hero-info">
+
+          <div class="project-breadcrumb">
+            <a href="projets.html">Projets</a>
+            <span>/</span>
+            <span>Universitaire</span>
+            <span>/</span>
+            <span>SAÉ — Estimation par échantillonnage</span>
+          </div>
+
+          <h1 class="project-title">
+            <span class="project-title-emoji">📊</span>
+            SAÉ — Estimation par échantillonnage
+          </h1>
+
+          <p class="project-tagline">
+            Test de plusieurs méthodes d'échantillonnage pour estimer la population en Bretagne.
+            L'objectif était d'appréhender ces méthodes et d'identifier les paramètres pouvant
+            avoir une influence sur leurs résultats.
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">Universitaire</span>
+            <span class="badge">S1 — 2025/2026</span>
+            <span class="badge done">Terminé</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           PRÉSENTATION
+           ================================================ -->
+      <div class="project-section fade-in fade-in-2">
+        <div class="section-title">Présentation</div>
+
+        <div class="project-description">
+
+          <p>
+            Ce projet était la continuité de notre cours de statistique inférentielle.
+            Nous y avions vu des outils statistiques tels que les estimateurs ponctuels,
+            les intervalles de confiance ou encore le test du χ². Ce projet avait pour but
+            de nous faire manipuler ces outils tout en nous faisant comprendre l'importance
+            d'avoir des données homogènes pour réaliser des estimations par échantillonnage.
+          </p>
+
+          <p>
+            Le projet était divisé en 2 parties. Premièrement, nous devions estimer la
+            population d'une région (Bretagne pour mon groupe) par échantillonnage en
+            calculant des IDC. Deuxièmement, nous devions utiliser une enquête (sondage)
+            sur la pratique sportive au sein du BUT afin de déterminer, via le test du χ²
+            (et le V de Cramér), le lien entre les variables et le fait de pratiquer une
+            activité sportive. Pour cela, nous avons utilisé le logiciel R.
+          </p>
+
+          <p>
+            Dans la première partie, on a réalisé un échantillonnage simple, puis des
+            échantillonnages stratifiés (4 puis 10 strates). Cela nous a permis de comprendre
+            que des données hétérogènes génèrent des estimations peu fiables (due à une grande
+            marge d'erreur et à des résultats éloignés de la réalité). L'échantillonnage stratifié
+            résout partiellement ce problème en créant des sous-populations plus homogènes entre elles.
+          </p>
+
+          <p>
+            Dans la deuxième partie, il a fallu nettoyer les données, tester l'indépendance avec
+            le test du χ² et, si cette hypothèse était invalidée, mesurer la force du lien avec
+            le V de Cramér. Il a également fallu interpréter ces liens en utilisant notamment
+            les contributions, afin d'identifier quelle modalité crée le lien.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           TECHNOLOGIES
+           ================================================ -->
+      <div class="project-section fade-in fade-in-3">
+        <div class="section-title">Technologies et Compétences</div>
+
+        <div class="tech-grid">
+
+          <div class="tech-item">
+            <div class="tech-name">Langage R</div>
+            <div class="tech-desc">
+              Extraction et nettoyage de données, calculs statistiques, exportation de résultats.
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">Statistiques</div>
+            <div class="tech-desc">
+              Échantillonnage (simple et stratifié), IDC, test du χ², V de Cramér.
+            </div>
+          </div>
+
+	<div class="tech-item">
+  		<div class="tech-name">Rédaction</div>
+  		<div class="tech-desc">
+   	 Capacité à présenter des résultats techniques.
+  	</div>
+	</div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           DÉTAILS
+           ================================================ -->
+      <div class="project-section fade-in fade-in-4">
+        <div class="section-title">Détails</div>
+
+        <div class="detail-blocks">
+
+          <div class="detail-block">
+            <div class="detail-block-title">Difficultés rencontrées</div>
+            <p>
+              La principale difficulté a été d'appréhender ces nouvelles techniques statistiques
+              afin de les utiliser correctement dans leur contexte et de produire des interprétations justes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           ILLUSTRATIONS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Illustrations</div>
+
+        <div class="illus-grid">
+
+          <div class="illus-item">
+            <img src="./img/08_illu1_echantillion.png" alt="Illustration SAÉ — Présentation du territoire (1/3)">
+          </div>
+
+          <div class="illus-item">
+            <img src="./img/08_illu2_echantillion.png" alt="Illustration SAÉ — Présentation du territoire (2/3)">
+          </div>
+
+          <div class="illus-item">
+            <img src="./img/08_illu3_echantillion.png" alt="Illustration SAÉ — Présentation du territoire (3/3)">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           LIENS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Liens</div>
+
+        <div class="project-links">
+
+          <a href="#" class="project-link link-primary">
+            ⇗ GitHub
+          </a>
+
+          <a href="#" class="project-link link-outline">
+            📄 Rapport PDF
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Louis RENARD &mdash; Portfolio 2026 &nbsp;·&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;·&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+
+  <script src="../../js/nav.js"></script>
+
+</body>
+</html>
