@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr" data-base="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — SAÉ — Analyse de données, reporting et datavisualisation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-title">Projet</div>
+    <div class="header-name">
+      Louis <strong>RENARD</strong>
+      <span>Étudiant en Science des Données</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+
+      <a class="back-btn fade-in" href="../projets.html">Retour aux projets</a>
+
+      <div class="project-hero fade-in fade-in-1">
+
+        <div class="project-img project-img-placeholder">📊</div>
+
+        <div class="project-hero-info">
+
+          <div class="project-breadcrumb">
+            <a href="projets.html">Projets</a>
+            <span>/</span>
+            <span>Universitaire</span>
+            <span>/</span>
+            <span>SAÉ — Analyse de données, reporting et datavisualisation</span>
+          </div>
+
+          <h1 class="project-title">
+            <span class="project-title-emoji">📊</span>
+            SAÉ — Analyse de données, reporting et datavisualisation
+          </h1>
+
+          <p class="project-tagline">
+            Création d'un outil pour un laboratoire vétérinaire. Utilisation de la méthode agile (SCRUM).
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">Universitaire</span>
+            <span class="badge">S2 — 2025/2026</span>
+            <span class="badge done">Terminé</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           PRÉSENTATION
+           ================================================ -->
+      <div class="project-section fade-in fade-in-2">
+        <div class="section-title">Présentation</div>
+
+        <div class="project-description">
+
+          <p>
+            Ce projet fut le dernier vrai projet de l'année. Pour la première fois, nous avons eu un vrai commanditaire : le laboratoire Qualiz. Ce laboratoire gère les analyses bactériennes des cheptels du 86 et du 79, entre autres. L'un de leurs employés avait une vraie problématique : il devait, à la main, créer un tableau de synthèse des résultats des différentes années afin d'établir une classification. Qui dit opération répétitive à la main dit opération chronophage et potentiellement source d'erreurs. Pour trouver une solution, il nous a été proposé, sur nos 2 dernières semaines de cours, de créer un outil pour prendre en charge ce processus.
+          </p>
+
+          <p>
+            Dans une base de données, nous devions pouvoir stocker les informations des différentes années, créer la classification et l'exporter. De plus, nous devions également proposer des indicateurs statistiques. Les technologies étaient libres. Nous devions également appliquer la méthode agile (SCRUM) pour la gestion du projet. L'équipe était donc composée de 4 personnes, dont un Scrum Master (dans notre cas). L'outil devait être le plus simple à utiliser possible.
+          </p>
+
+          <p>
+            Nous avons fait le choix de partir sur Python (pour sa grande polyvalence) avec une interface graphique en Streamlit (programmation Python web) et une base de données SQLite (tous les avantages d'une base de données sans serveur à lancer). Nous avons également appliqué le management visuel ainsi que le développement collaboratif avec GitHub. Nous avons fait un rendu sous forme d'application installable et lançable avec un .exe.
+          </p>
+
+          <p>
+            Pour ma part, je me suis occupé de la partie back de l'importation, de la normalisation et de la mise en base des données. À noter que les données avaient besoin de normalisation et de vérification avant import, en raison de leur qualité dégradée par l'action humaine. J'ai utilisé des technologies comme pandas, sqlite3, re (expressions régulières), os, datetime et unicodedata. Pour des raisons de RGPD, l'application ne sera pas disponible avec les données du laboratoire.
+          </p>
+
+          <p>
+            Pour nous aider à comprendre le contexte métier, le professionnel du laboratoire est resté à notre disposition. J'ai également été l'un des 2 élèves qui se sont occupés de la centralisation de la communication (pour éviter d'envoyer 10 fois la même question, par exemple).
+          </p>
+
+          <p>
+            Pour ma part, ce travail m'a profondément fait remettre en cause l'utilisation de l'IA générative dans mon apprentissage et dans mes travaux (de groupe notamment).
+          </p>
+
+          <p>
+            Il y a eu plusieurs formes de rendu sur ce projet. Tout d'abord une soutenance en anglais pour présenter notre production au professeur. Ensuite un compte rendu individuel et un compte rendu collectif (pour l'analyse), ainsi qu'une vidéo de présentation. Et bien sûr notre livrable (application).
+          </p>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           TECHNOLOGIES
+           ================================================ -->
+      <div class="project-section fade-in fade-in-3">
+        <div class="section-title">Technologies et Compétences</div>
+
+        <div class="tech-grid">
+
+          <div class="tech-item">
+            <div class="tech-name">Python</div>
+            <div class="tech-desc">
+              Interface web, lecture des données, normalisation, interactions avec la base
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">Git</div>
+            <div class="tech-desc">
+              Développement collaboratif
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">Méthode agile</div>
+            <div class="tech-desc">
+              Management visuel, SCRUM, auto-management, etc.
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-name">SQL</div>
+            <div class="tech-desc">
+              Création, insertion et lecture de la base.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           DÉTAILS
+           ================================================ -->
+      <div class="project-section fade-in fade-in-4">
+        <div class="section-title">Détails</div>
+
+        <div class="detail-blocks">
+
+          <div class="detail-block">
+            <div class="detail-block-title">Fonctionnalités principales</div>
+
+            <ul>
+              <li>Installation de l'application, lancement en .exe.</li>
+              <li>Insertion robuste de nouvelles données, détection automatique des paramètres et prévisualisation avec possibilité de modifier avant import.</li>
+              <li>Affichage du tableau de résultats, de la classification et de graphiques informatifs (notamment des cartographies). Le tout avec des options de filtrage et la possibilité d'export.</li>
+              <li>Système de backup de la base de données.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block-title">Difficultés rencontrées</div>
+
+            <p>
+              Les 2 principales difficultés ont été la compréhension du contexte métier et la coordination du travail d'équipe.
+            </p>
+          </div>
+
+	<!-- ================================================
+           ILLUSTRATIONS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Illustrations</div>
+
+        <div class="illus-grid">
+
+        <div class="illus-item">
+          <img src="./img/13_illu1-quapritracke.png" alt="">
+        </div>
+        
+
+          <div class="illus-item">
+          <img src="./img/13_illu2-quapritracke.png" alt="">
+        </div>
+
+          <div class="illus-item">
+          <img src="./img/13_illu3-quapritracke.png" alt="">
+        </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================
+           LIENS
+           ================================================ -->
+      <div class="project-section">
+        <div class="section-title">Liens</div>
+
+        <div class="project-links">
+
+          <a href="lien/13-compte-rendu-personelle-quapritrack.docx" class="project-link link-outline">
+            📄 Rapport personelle
+          </a>
+
+        </div>
+      </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </main>
+
+  <footer>
+    Louis RENARD &mdash; Portfolio 2026 &nbsp;·&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;·&nbsp;
+    <a href="../cv/cv.pdf" target="_blank">CV</a>
+  </footer>
+
+  <script src="../../js/nav.js"></script>
+
+</body>
+</html>
